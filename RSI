@@ -1,0 +1,5 @@
+{bientam <- tq_get("PLL", get = "stock.prices", from = begin, to = end)
+price <- bientam[, "close"]
+price1 = rbind(price,list(50))
+rsi <- RSI(price1, n=14)
+view(tail(rsi,3))}
